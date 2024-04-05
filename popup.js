@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
    
 
     checkbox.addEventListener('click', () => {
+        const n = document.querySelector('#number').value
+        
         if (checkbox.checked) {
-            sendModActivateMessage()
+            sendModActivateMessage(n)
             
         } else {
             sendModNotActivateMessage()
@@ -21,19 +23,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Fonction pour arrêter le timer
     function sendModNotActivateMessage() {
-        clearInterval(timerInterval);
-        timerDisplay.textContent = "--:--"; // Réinitialiser le timer à 10:00
-        count = 0; // Réinitialiser le compteur si l'utilisateur désactive le timer manuellement
+       
+        
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
             chrome.tabs.sendMessage(tabs[0].id, {action: "modNotActivate"});
         });
     }
 
     // Fonction pour envoyer le message "modActivate"
-    function sendModActivateMessage() {
+    function sendModActivateMessage(n) {
         
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, {action: "modActivate"});
+            chrome.tabs.sendMessage(tabs[0].id, {action: "modActivate", n: n});
         });
     }
 
