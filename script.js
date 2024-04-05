@@ -45,7 +45,7 @@ function UnfollowMax (){
 
     if (isAllOnes) {
         console.log("Fin de l'algo");
-        return
+        return  
     } else {
         console.log("Le tableau contient au moins un élément différent de '1'.");
         setTimeout(() => {
