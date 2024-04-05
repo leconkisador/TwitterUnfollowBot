@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Twitter",
+    "name": "Twitter Unfollow",
     "description": "a twitter bot",
     "version": "1.0",
     "permissions": [
