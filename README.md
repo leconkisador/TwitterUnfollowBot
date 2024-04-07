@@ -1,5 +1,5 @@
-# TwitterFollowBot
-A twitter bot that follow as many people as you want
+# TwitterUnfollowBot
+A twitter bot that unfollow as many people as you want
 
 ## Description
 
