@@ -1,13 +1,11 @@
+//wait that the DOM is fuly charge
 document.addEventListener("DOMContentLoaded", function() {
+    //get the button value (on or off)
     const checkbox = document.getElementById("checkbox");
     
-
-    
-    
-
-   
-
+    //add an evenlistener to this button
     checkbox.addEventListener('click', () => {
+        //get the value of the input
         const n = document.querySelector('#number').value
         
         if (checkbox.checked) {
@@ -18,21 +16,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Fonction pour démarrer le timer
 
 
-    // Fonction pour arrêter le timer
+
+    //send the message "Activation" to the script.js
     function sendModNotActivateMessage() {
-       
-        
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
             chrome.tabs.sendMessage(tabs[0].id, {action: "modNotActivate"});
         });
     }
 
-    // Fonction pour envoyer le message "modActivate"
-    function sendModActivateMessage(n) {
-        
+    //send the message "Activation" to the script.js
+    function sendModActivateMessage(n) {        
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
             chrome.tabs.sendMessage(tabs[0].id, {action: "modActivate", n: n});
         });

@@ -57,3 +57,10 @@ input{
 div{
   margin-top: 50px;
 }
+
+div{
+  margin: 20px;
+  margin-top: 35px;
+  font-size: 15px;
+  
+}
