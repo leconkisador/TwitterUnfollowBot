@@ -13,7 +13,7 @@
     },
     "action": {
       "default_popup": "index.html",
-      "default_icon": "medias/logo1.png"
+      "default_icon": "medias/logo.png"
     },
     "content_scripts": [
       {
