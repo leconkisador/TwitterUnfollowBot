@@ -9,7 +9,7 @@
     ],
     "icons":
     {
-     "128": "medias/logo1.png"
+     "128": "medias/logo.png"
     },
     "action": {
       "default_popup": "index.html",
